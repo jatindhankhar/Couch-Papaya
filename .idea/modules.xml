@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CouchPapaya.iml" filepath="$PROJECT_DIR$/CouchPapaya.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Couch-Papaya.iml" filepath="$PROJECT_DIR$/Couch-Papaya.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
