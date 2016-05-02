@@ -10,4 +10,38 @@
     <string name="title_activity_moviedetails">moviedetails</string>
     <string name="released_on">Released on</string>
     <string name="overview">Overview</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+     <string-array name="categoryList">
+     <item>Popularity</item>
+         <item>Top Rated</item>
+     </string-array>
+
+    <string-array name="categoryValues">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="imageSizeList">
+        <item>w92</item>
+        <item>w154</item>
+        <item>w185</item>
+        <item>w342</item>
+        <item>500</item>
+        <item>780</item>
+        <item>Original (High Resolution) </item>
+    </string-array>
+
+    <string-array name="imageSizeValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <!-- End Settings -->
+
 </resources>

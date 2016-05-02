@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<ListPreference
+    android:title="Default category"
+    android:key="default_category"
+    android:summary="Defines category to be loaded when app is opened"
+    android:entryValues="@array/categoryValues"
+    android:entries="@array/categoryList"
+    android:defaultValue="2" />
+
+    <ListPreference
+        android:title="Poster Image Size"
+        android:key="image_size"
+        android:summary="Image size to be used when downloading Poster Image. High size means more data usage"
+        android:entryValues="@array/imageSizeValues"
+        android:entries="@array/imageSizeList"
+        android:defaultValue="4"
+        />
+</PreferenceScreen>

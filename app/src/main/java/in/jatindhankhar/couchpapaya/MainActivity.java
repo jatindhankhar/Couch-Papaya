@@ -56,9 +56,9 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_settings:
-                Toast.makeText(MainActivity.this, "Settings were clicked", Toast.LENGTH_SHORT).show();
-
+                startActivity(new Intent(MainActivity.this,SettingsActivity.class));
                 return true;
+
             case R.id.sort_popularity:
                 imageAdapter.get_data("popular");
                 Toast.makeText(MainActivity.this, "Sorting by Popularity", Toast.LENGTH_SHORT).show();
