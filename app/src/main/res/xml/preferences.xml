@@ -6,7 +6,8 @@
     android:summary="Defines category to be loaded when app is opened"
     android:entryValues="@array/categoryValues"
     android:entries="@array/categoryList"
-    android:defaultValue="2" />
+    android:defaultValue="2"
+    />
 
     <ListPreference
         android:title="Poster Image Size"
