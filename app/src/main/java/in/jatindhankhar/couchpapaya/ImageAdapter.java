@@ -27,10 +27,10 @@ public class ImageAdapter extends BaseAdapter {
     private static ArrayList<String> URLS = new ArrayList<String>();
     private static ArrayList<JsonObject> JSON_BLOBS = new ArrayList<JsonObject>();
 
-    public ImageAdapter(Context c) {
+    public ImageAdapter(Context c, String defaultCategory) {
         mContext = c;
         this.TMDB = new tmdb_client();
-        this.get_data("popular");
+        this.get_data(defaultCategory);
         this.imageLoader = Picasso.with(mContext);
 
     }
