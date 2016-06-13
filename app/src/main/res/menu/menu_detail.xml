@@ -1,7 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    >
+    xmlns:tools="http://schemas.android.com/tools">
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
@@ -10,20 +9,23 @@
 
     <item
         android:id="@+id/action_sort"
-        app:showAsAction="ifRoom"
-        android:title="Sort by"
         android:icon="@android:drawable/ic_menu_sort_by_size"
-        >
-    <menu>
-    <item
-        android:id="@+id/sort_popularity"
-        android:title="Popularity"
-        android:icon="@drawable/ic_trending_up"/>
-    <item
-        android:id="@+id/sort_top_rated"
-        android:title="Top Rated"
-        android:icon="@drawable/ic_stars"
-        />
-</menu>
-        </item>
+        android:title="Sort by"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/sort_popularity"
+                android:icon="@drawable/ic_trending_up"
+                android:title="Popularity" />
+            <item
+                android:id="@+id/sort_top_rated"
+                android:icon="@drawable/ic_stars"
+                android:title="Top Rated" />
+
+            <item
+                android:id="@+id/sort_favourites"
+                android:icon="@drawable/ic_favorite_black_24dp"
+                android:title="Favourites" />
+        </menu>
+    </item>
 </menu>
