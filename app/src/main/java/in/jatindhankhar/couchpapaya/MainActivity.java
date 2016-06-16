@@ -20,7 +20,7 @@ import com.google.gson.JsonObject;
 
 import java.lang.reflect.Array;
 
-public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
+public class MainActivity extends AppCompatActivity  {
 
     private final String LOG_TAG = this.getClass().getSimpleName();
     private ImageAdapter imageAdapter;
@@ -32,9 +32,10 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
         //*** Todo - Improve way of getting value  ***//
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String index_val = prefs.getString(getString(R.string.default_category), "");
-        String res = getResources().getStringArray(R.array.categoryList)[Integer.parseInt(index_val) - 1];
-        return res.toLowerCase().replace(" ", "_");
+  //      String index_val = prefs.getString(getString(R.string.default_category), "");
+//        String res = getResources().getStringArray(R.array.categoryList)[Integer.parseInt(index_val) - 1];
+        //return res.toLowerCase().replace(" ", "_");
+        return "popularity";
 
     }
 
@@ -43,7 +44,10 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         GridView gridView = (GridView) findViewById(R.id.gridview);
-        Log.d(LOG_TAG, "Constructing it with " + getDefaultCategory());
+        startActivity(new Intent(this,MovieListActivity.class));
+//        Log.d(LOG_TAG, "Constructing it with " + getDefaultCategory());
+        finish();
+        /*
         imageAdapter = new ImageAdapter(this, getDefaultCategory());
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_part);
         mSwipeRefreshLayout.setOnRefreshListener(this);
@@ -79,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
             }
         });
-
+        */
     }
 
     @Override
@@ -117,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
     }
 
-
+/*
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
@@ -153,5 +157,5 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             }
         }, 2000);
     }
-
+*/
 }

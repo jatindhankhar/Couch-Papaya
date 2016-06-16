@@ -17,24 +17,22 @@ public class MovieDbHelper extends SQLiteOpenHelper {
     }
 
 
-    private static String setNotNullProp(String type) {
-        return type + " " + "NOT NULL,";
-    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        final String SQL_CREATE_MOVIES_TABLE = "CREATE TABLE" + MovieContract.MovieEntry.TABLE_NAME + "(" +
-                MovieContract.MovieEntry._ID + "INTEGER PRIMARY KEY," +
-                MovieContract.MovieEntry.COLUMN_MOVIE_ID + setNotNullProp("INTEGER") +
-                MovieContract.MovieEntry.COLUMN_MOVIE_TITLE + setNotNullProp("TEXT") +
-                MovieContract.MovieEntry.COLUMN_MOVIE_POSTER_PATH + setNotNullProp("TEXT") +
-                MovieContract.MovieEntry.COLUMN_MOVIE_OVERVIEW + setNotNullProp("TEXT") +
-                MovieContract.MovieEntry.COLUMN_MOVIE_VOTE_AVERAGE + setNotNullProp("TEXT") +
-                MovieContract.MovieEntry.COLUMN_MOVIE_RELEASE_DATE + setNotNullProp("TEXT") +
-                MovieContract.MovieEntry.COLUMN_MOVIE_BACKDROP_PATH + setNotNullProp("TEXT") +
-                " );";
-        db.execSQL(SQL_CREATE_MOVIES_TABLE);
+        final String QUERY = "CREATE TABLE " + MovieContract.MovieEntry.TABLE_NAME
+                + " ( " +
+                MovieContract.MovieEntry._ID + " INTEGER PRIMARY KEY," +
+                MovieContract.MovieEntry.COLUMN_MOVIE_ID + " INTEGER NOT NULL, " +
+                MovieContract.MovieEntry.COLUMN_MOVIE_TITLE + " TEXT NOT NULL, " +
+                MovieContract.MovieEntry.COLUMN_MOVIE_POSTER_PATH + " TEXT NOT NULL, " +
+                MovieContract.MovieEntry.COLUMN_MOVIE_OVERVIEW + " TEXT NOT NULL, " +
+                MovieContract.MovieEntry.COLUMN_MOVIE_VOTE_AVERAGE + " TEXT NOT NULL, " +
+                MovieContract.MovieEntry.COLUMN_MOVIE_RELEASE_DATE + " TEXT NOT NULL, " +
+                MovieContract.MovieEntry.COLUMN_MOVIE_BACKDROP_PATH + " TEXT NOT NULL " +
+                ");";
+        db.execSQL(QUERY);
 
 
     }
