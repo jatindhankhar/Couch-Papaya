@@ -1,17 +1,10 @@
 <resources>
     <string name="app_name">Couch Papaya</string>
-    <string name="title_activity_detail">DetailActivity</string>
     <string name="action_settings">Settings</string>
-    <string name="spinner_title">Sort by</string>
-    <string-array name="spinner_options">
-        <item>Popularity</item>
-        <item>Top Rated</item>
-    </string-array>
     <string name="title_activity_moviedetails">moviedetails</string>
     <string name="released_on">Released on</string>
     <string name="overview">Overview</string>
     <string name="title_activity_settings">Settings</string>
-    <string name="default_category">default_category</string>
     <!-- Strings related to Settings -->
     <string-array name="categoryList">
         <item>Popularity</item>
