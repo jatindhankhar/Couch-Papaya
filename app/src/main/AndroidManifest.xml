@@ -35,10 +35,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="in.jatindhankhar.couchpapaya.MainActivity" />
         </activity>
+        <!-- https://developer.android.com/guide/topics/manifest/activity-element.html -->
         <activity
+
             android:name=".MovieListActivity"
             android:label="@string/title_movie_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            ></activity>
         <activity
             android:name=".MovieDetailActivity"
             android:label="@string/title_movie_detail"
@@ -51,9 +56,11 @@
 
         <provider
             android:name=".data.MovieProvider"
-            android:authorities="in.jatindhankhar.couchpapaya"
+            android:authorities="in.jatindhankhar.couchpapya"
             android:enabled="true"
-            android:exported="true"></provider>
+            android:exported="true">
+
+        </provider>
     </application>
 
 </manifest>
